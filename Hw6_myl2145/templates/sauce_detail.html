@@ -1,0 +1,55 @@
+{% extends "layout.html" %}'
+{% block content %}
+    <script>
+         const sauce = {{ sauce|tojson }};
+         const sauces = {{sauces|tojson}};
+    </script>
+    <div class="sauce_detail_header">
+        <span id="sauce_detail_title">{{sauce.name}} <span id="sauce_oz">{{sauce.net_wt_oz}}oz.</span></span>
+        <div class="brand">
+            <span id="sauce_brand_name">
+                    Brand: {{sauce.brand}}
+            </span>
+        </div>
+    </div>
+    <div class="sauce_detail_image">
+        <img src="{{ url_for('static', filename='images/'+sauce.img) }}" alt="" />
+    </div>
+    <div class="sauce_detail_body">
+        <div class="price">
+            <span id="s_price">Price: <span id="s_value">${{sauce.price}}</span></span>
+        </div>
+        <div class="scoville">
+            <span id="s_scoville">Scoville Heat Unit: <span id="shu_value">{{sauce.scoville_heat_unit}}</span></span>
+        </div>
+        <div class="rating">
+            <span id="s_rating">Flavor Rating: {{sauce.rating_out_of_10}}/10</span>
+        </div>  
+        <div class="same_brand_products">
+            <span id="same_brand_title">From the Same Brand: </span>
+            <ul class="same_brand_list">
+                {% for same_brand_sauces in brands[sauce.brand] %}
+                    {% if same_brand_sauces != sauce.id %}
+                    <li class="brand_sauce_item">
+                        <a href="{{ url_for('sauceDetail', sauce_id=same_brand_sauces) }}">
+                            {{sauces[same_brand_sauces].name}}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="similar_heat">
+            <span id="similar_heat_title">Similar Heat: </span>
+            <ul class="heat_list">
+                {% for similar_sauce in sauce.similar_heat %}
+                    <li class="similar_sauce_item">
+                        <a href="{{ url_for('sauceDetail', sauce_id=similar_sauce) }}">
+                            {{sauces[similar_sauce].name}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

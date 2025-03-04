@@ -1,0 +1,18 @@
+{% extends "layout.html" %}'
+{% block content %}
+    <script type="text/javascript" src="{{ url_for('static', filename = 'landing_page.js') }}"></script>
+    <script>
+        const sauces = {{ sauces|tojson }};
+    </script>
+    <div class="landing_header">
+        <span id="header_text">Most Popular Hot Sauces this week: </span>
+    </div>
+    <div class="landing_body">
+        <ul class="popular_list">
+            {% for sauce_id in top_three_list %}
+                <a href="{{ url_for('sauceDetail', sauce_id=sauce_id) }}">
+                <li class="top_sauce_name">{{sauces[sauce_id]['name']}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}'
+{% block content %}
+    <script>
+        const search_input = {{search_input|tojson}}
+        const search_result = {{search_result|tojson}}
+        console.log(search_result.length)
+    </script>
+    <span id="search_header">Search Results for "<span>{{search_input}}</span>"</span>
+    <ul class="search_result_list">
+        {% if search_result|length == 0 %}
+            <span>No results found</span>
+        {% else %}
+        {% for sauce in search_result %}
+        <li class="search_result_items">
+            <a href="{{ url_for('sauceDetail', sauce_id=sauce.id) }}">
+                {{sauce.name}}
+            </a>
+        </li>
+    {% endfor %}
+        {% endif %}
+
+    </ul>
+
+{% endblock %}

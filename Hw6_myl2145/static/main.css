@@ -1,0 +1,249 @@
+.navbar-brand{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: xx-large;
+    & img{
+        padding-right: 8px;
+    }
+}
+@media(min-width:478px){
+    #search_header{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    #header_text{
+        font-size: x-large;
+        font-weight: bold;
+        padding-left: 10%;
+    }
+    #sauce_detail_title{
+        font-size: x-large;
+        font-weight: bold;
+    }
+    #sauce_oz {
+        font-size: small;
+        font-weight: normal;
+    }
+    #sauce_brand_name{
+        color:gray;
+    }
+    #s_price{
+        font-weight: bold;
+    }
+    #s_value{
+        font-weight: normal;
+    }
+    .rating{
+        padding-bottom: 2%;
+    }
+   
+    #shu_value{
+        font-weight: normal;
+    }
+    .price{
+        padding-bottom: 2%;
+    }
+    .popular_list{
+        font-size: x-large;
+        list-style: none;
+        padding:0;
+        padding-left:12%;
+    }
+    .search_result_list{
+        list-style: none;
+        padding:0;
+        padding-left:1%;
+    }
+    .search_result_items{
+        padding-top: 2%;
+    }
+    #same_brand_title{
+        font-weight: bold;
+    }
+    #similar_heat_title{
+        font-weight: bold;
+    }
+    .similar_heat, .same_brand_products {
+        display: flex;
+        align-items: center;
+    } 
+    .heat_list, .same_brand_list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    } 
+    .similar_sauce_item, .brand_sauce_item {
+        margin-left: 10px;
+    }  
+    .similar_sauce_item:not(:last-child)::after, 
+    .brand_sauce_item:not(:last-child)::after {
+        content: ",";
+        margin-right: 5px;
+    }    
+}
+@media(432px < width < 478px ){
+    #header_text{
+        font-size: x-large;
+        font-weight: bold;
+        padding:0;
+    }
+    .popular_list{
+        font-size: x-large;
+        list-style: none;
+        padding:0;
+        padding-left: 2%;
+    }
+    #search_header{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    #sauce_detail_title{
+        font-size: x-large;
+        font-weight: bold;
+    }
+    #sauce_oz {
+        font-size: small;
+        font-weight: normal;
+    }
+    #sauce_brand_name{
+        color:gray;
+    }
+    #s_price{
+        font-weight: bold;
+    }
+    #s_value{
+        font-weight: normal;
+    }
+    .rating{
+        padding-bottom:5%;
+    }
+   
+    #shu_value{
+        font-weight: normal;
+    }
+    .price{
+        padding-bottom: 5%;
+    }
+    .search_result_list{
+        list-style: none;
+        padding:0;
+        padding-left:1%;
+    }
+    .search_result_items{
+        padding-top: 2%;
+    }
+    #same_brand_title{
+        font-weight: bold;
+    }
+    #similar_heat_title{
+        font-weight: bold;
+    }
+    .similar_heat, .same_brand_products {
+        display: flex;
+        align-items: center;
+    } 
+    .same_brand_products{
+        padding-bottom: 2%;
+    }
+    .heat_list, .same_brand_list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    } 
+    .similar_sauce_item, .brand_sauce_item {
+        margin-left: 10px;
+    }  
+    .similar_sauce_item:not(:last-child)::after, 
+    .brand_sauce_item:not(:last-child)::after {
+        content: ",";
+        margin-right: 5px;
+    }  
+}
+@media( width <= 432px ){
+    #header_text{
+        font-size: large;
+        font-weight: bold;
+        padding:0;
+    }
+    .popular_list{
+        font-size: large;
+        list-style: none;
+        padding:0;
+        padding-left: 2%;
+    }
+    #search_header{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    #sauce_detail_title{
+        font-size: x-large;
+        font-weight: bold;
+    }
+    #sauce_oz {
+        font-size: small;
+        font-weight: normal;
+    }
+    #sauce_brand_name{
+        color:gray;
+    }
+    #s_price{
+        font-weight: bold;
+    }
+    #s_value{
+        font-weight: normal;
+    }
+    .rating{
+        padding-bottom:5%;
+    }
+   
+    #shu_value{
+        font-weight: normal;
+    }
+    .price{
+        padding-bottom: 5%;
+    }
+    .search_result_list{
+        list-style: none;
+        padding:0;
+        padding-left:1%;
+    }
+    .search_result_items{
+        padding-top: 2%;
+    }
+    #same_brand_title{
+        font-weight: bold;
+    }
+    #similar_heat_title{
+        font-weight: bold;
+    }
+    .similar_heat, .same_brand_products {
+        display: flex;
+        align-items: center;
+    } 
+    .same_brand_products{
+        padding-bottom: 2%;
+    }
+    .heat_list, .same_brand_list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    } 
+    .similar_sauce_item, .brand_sauce_item {
+        margin-left: 10px;
+    }  
+    .similar_sauce_item:not(:last-child)::after, 
+    .brand_sauce_item:not(:last-child)::after {
+        content: ",";
+        margin-right: 5px;
+    }    
+}
+.landing_header{
+    padding-bottom: 5%;
+}
+.top_sauce_name{
+    padding-bottom: 5%;
+}
